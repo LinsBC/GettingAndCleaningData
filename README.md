@@ -101,7 +101,10 @@ The script performs the following steps:
     containing Subject\_ID, Activity and all columns containing either
     mean or standard deviation data (identified by searching for
     variable names containing "mean" or "std").
-8.  Tidies up the feature variables names by replacing . with -
+8.  Tidies the variable names in the data set by removing all "." and
+    capitalizing name sections (e.g. Mean). (e.g. tBodyAcc-mean()-X)
+    becomes tBodyAcc.mean...X on loading into a data frame. After
+    running the script it is TBodyAccMeanX)
 9.  Use the data loaded from activity\_labels.txt to replace the
     integers in the Activity column with meaningful activity names.
 10. Creates a final tidy data set by averaging the data for each subject
